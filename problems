@@ -1,0 +1,23 @@
+1. First problem I encountered was about creating variable.
+    - I have to take variable from user later down the road
+    - If I assign the random value it might just match the guessed number and never go in loop
+    - I couldn't think of way to create a empty integer variable.
+    Solution:
+    - I thought of just creating empty string with "" and converting it to int('') but not working as I thought
+    - Found way on stack overflow you can just a = int() simple as that or just a = none.
+
+2. Solution to first problem presented me with second problem
+    - it was printing none everytime loop was running
+    - I first thought this might be the problem, that program might be printing Guess from below first
+        guess = int(input(print("Please Guess the Random Number from 0 to 100:")))
+        if guess > 100 | guess < 100:
+            print(f'You guessed {guess}')
+    - None is being printed even after guess has value assigned.
+    Solution:
+    int(input("Please Guess the Random Number from 0 to 100: "))
+    you do not need print with input, solved by just curiousity of trying to remove print
+
+3. TypeError: unsupported operand type(s) for |: 'int' and 'str'
+    - I was taking use input like this: input(print("Please Guess the Random Number from 0 to 100:"))
+    - forgot to covert it into Integer via int(input())
+    - solved by having vague knowledge of this and seeing error
